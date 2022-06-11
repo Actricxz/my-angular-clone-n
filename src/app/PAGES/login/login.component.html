@@ -1,0 +1,49 @@
+<!-- <div class="login">
+  <div class="login_container">
+      <img routerLink="/" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" class="login_logo" alt="">
+      <div class="login_form">
+          <h1>Sign-in</h1>
+          <form *ngIf="LoginForm"[formGroup]="LoginForm">
+              <h5>Email</h5>
+              <input type="email" class="com" formControlName='email'>
+              <h5>password</h5>
+              <input type="password" class="com" name="" id="" formControlName='password'>
+              <button class="login_signin_button" (click)="onSubmit()">Sign In</button>
+              <p class="login_terms">By continuing , you agree to Amazon's conditions of use and privacy notice</p>
+              
+          </form>
+      </div>
+  </div>
+
+</div> -->
+<!-- </div> -->
+
+
+
+<div class="row p-4">
+    <div class="col-6 m-auto">
+    <div class="card m-auto">
+      <div class="card-header">
+        Login
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group col-12">
+            <label for="email" class="form-label" >Email</label>
+            <input [(ngModel)]="userEmail"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ngModel [ngModelOptions]="{standalone: true}" type="text" class="form-control"title="Invalid email address" required>
+            
+          </div>
+  
+          <div class="form-group col-12">
+            <label for="passwrod" class="form-label">Password</label>
+            <input [(ngModel)]="userPassword" ngModel [ngModelOptions]="{standalone: true}" type="password" pattern="[a-zA-Z]{1,}" class="form-control" required >
+          </div>
+
+          <div class="form-group col-12">
+            <button (click)="onSubmit()" type="submit" class="btn btn-primary">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    </div>
+  </div> 
